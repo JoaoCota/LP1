@@ -1,10 +1,9 @@
-
 #include <stdio.h>
 #include <string.h>
 
 int main (void) {
-	char nome[20], N[20], n[20];
-	int i=1, v, e, d, ponto_atual, P=0, p=1;
+	char nome[99], N[99], n[99];
+	int i=1, v, e, d, ponto_atual, P=0, p=999;
 	while(i<=3){  //TESTE COM APENAS 3 TIMES. FUNCIONA COM OS 3, LOGO FUNCIONARÁ COM 20.
 		printf("Digite o nome do time %d: \n", i);
 		scanf("%s", nome);
@@ -16,17 +15,17 @@ int main (void) {
 		scanf("%d", &d);
 		ponto_atual = (v*3) + e;
 		if(ponto_atual>P){
-			P = ponto_atual;
 			strcpy(N,nome);
+			P = ponto_atual;
 		}
-		else{
-			p = ponto_atual;
+		if(ponto_atual<p) {
 			strcpy(n,nome);
+			p = ponto_atual;
 		}
 		
-		i+=1;
+		i++;
 	}
-	printf("Time %s tem mais pontos.\n", N);
-	printf("Time %s tem menos pontos.\n", n);
+	printf("Time %s tem %d pontos e eh o time com mais pontos.\n", N, P);
+	printf("Time %s tem %d pontos e eh o time com menos pontos.\n", n, p);
     return 0;
 }
