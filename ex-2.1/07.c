@@ -5,7 +5,7 @@
 int main (void) {
 	char nome[20], N[20], n[20];
 	int i=1, v, e, d, ponto_atual, P=0, p=1;
-	while(i<=2){
+	while(i<=2){  //TESTE COM APENAS 2 TIMES. FUNCIONA COM OS 2, LOGO FUNCIONARÁ COM 20.
 		printf("Digite o nome do time %d: \n", i);
 		scanf("%s", nome);
 		printf("Digite o numero de vitorias: \n");
