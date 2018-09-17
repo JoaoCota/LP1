@@ -22,4 +22,5 @@ int main(void)
 	}
 	media = count/3;
 	printf("Media das temperaturas --> %hd.", media);
+	return 0;
 }
