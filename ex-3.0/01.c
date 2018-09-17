@@ -20,7 +20,7 @@ int main(void)
 			count += temp;
 		}
 	}
-	media = count/3;
+	media = count/50;
 	printf("Media das temperaturas --> %hd.", media);
 	return 0;
 }
