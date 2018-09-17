@@ -1,25 +1,30 @@
 #include <stdio.h>
-
-int main(void)
-{	
-	int num, i, count = 0;
-	printf("Digite um numero para saber se ele eh primo ou nao: \n\n");
-	scanf("%d", &num);
-	for (i=1; i<=num; i++)
+int eh_primo(int n)
+{
+	int i, count;
+	for (i=1; i<=n; i++)
 	{
-		if (num%i == 0)
+		if (n%i == 0)
 		{
 			count++;
 		}
 	}
 	if (count == 2)
 	{
-		printf("%d eh primo!", num);
+		printf("%d eh primo!", n);
 	}
 	else
 	{
-		printf("%d nao eh primo!", num);
+		printf("%d nao eh primo!", n);
 	}
+	
+}
+int main(void)
+{	
+	int num;
+	printf("Digite um numero para saber se ele eh primo ou nao: \n\n");
+	scanf("%d", &num);
+	int x = eh_primo(num);
 	printf("\n================================ \n :FIM DO PROGRAMA:");
 	return 0;
 }
