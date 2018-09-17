@@ -5,7 +5,7 @@ int main(void)
 {
 	char temps[50];
 	short temp, x, soma_temp = 0, media, loop, count = 0;
-	for (x=0; x<=2; x++)
+	for (x=0; x<=49; x++)
 	{
 		printf("Digite uma temperatura entre -100  e 100. \n");
 		scanf("%hd", &temp);
@@ -20,7 +20,7 @@ int main(void)
 			soma_temp += temp;
 		}
 	}
-	media = soma_temp/3;
+	media = soma_temp/50;
 	for (loop=0; loop<=2; loop++)
 	{
 		if(temps[loop] > media)
