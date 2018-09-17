@@ -5,7 +5,7 @@ int main(void)
 {
 	char temps[50];
 	short temp, x, count = 0, media;
-	for (x=0; x<=2; x++)
+	for (x=0; x<=49; x++)
 	{
 		printf("Digite uma temperatura entre -100  e 100. \n");
 		scanf("%hd", &temp);
