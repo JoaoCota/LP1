@@ -3,13 +3,14 @@
 
 int main(void)
 {
-	char temps[50];
+	char temps[50], temperatura;
 	short temp, x, soma_temp = 0, media, loop, count = 0;
 	for (x=0; x<=49; x++)
 	{
 		printf("Digite uma temperatura entre -100  e 100. \n");
 		scanf("%hd", &temp);
-		temps[x] = temp;
+		temperatura = temp;
+		temps[x] = temperatura;
 		if ((temp < -100) || (temp > 100))
 		{
 			printf("\n ERRO --> Digite apenas temperaturas entre -100  e 100. \n\n");
@@ -28,7 +29,7 @@ int main(void)
 			count++;
 		}
 	}
-	
+
 	printf("Media das temperaturas --> %hd. \n", media);
 	printf("%d temperatura(as) acima da media.", count);
 	return 0;
