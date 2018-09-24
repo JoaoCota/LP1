@@ -1,7 +1,7 @@
 #include <stdio.h>
 int eh_primo(int n)
 {
-	int i, count;
+	int i, count=0;
 	for (i=1; i<=n; i++)
 	{
 		if (n%i == 0)
