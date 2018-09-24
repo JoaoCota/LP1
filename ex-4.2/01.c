@@ -2,7 +2,7 @@
 
 int todos_os_primos(int n)
 {
-	int i, count;
+	int i, count=0;
 	while (n>0){
 		for (i=1; i<=n; i++)
 		{
