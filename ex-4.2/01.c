@@ -12,14 +12,25 @@ int eh_primo(int n)
 	}
 	if (count == 2)
 	{
-		printf("--> %d \n", n);
+		return 1;
 	}
+	else
+	{
+		return 0;
+	}
+
 }
 
-int todos_os_primos(int n)
+
+void todos_os_primos(int n)
 {
-	while (n>0){
+	while (n>0)
+	{
 		int x = eh_primo(n);
+		if (x == 1)
+		{
+            printf("--> %d\n", n);
+		}
 		n--;
 	}
 }
@@ -28,7 +39,7 @@ int main(void)
 	int max;
 	printf("Digite um numero para exibir os primos menores que ele: \n\n");
 	scanf("%d", &max);
-	int y = todos_os_primos(max);
+    todos_os_primos(max);
 	printf("\n================================ \n :FIM DO PROGRAMA:");
 	return 0;
 }
