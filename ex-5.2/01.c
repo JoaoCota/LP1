@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 void compra(int* p, int valor){
-    int x = *p-valor;
-    printf("Saldo conta utilizada: R$ %d.00", x);
+    int minha_conta = *p-valor;
+    printf("Saldo conta utilizada: R$ %d.00", minha_conta);
 }
 
 int main()
