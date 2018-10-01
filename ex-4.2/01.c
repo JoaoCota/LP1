@@ -29,7 +29,7 @@ void todos_os_primos(int n)
 		int x = eh_primo(n);
 		if (x == 1)
 		{
-            printf("--> %d\n", n);
+            		printf("--> %d\n", n);
 		}
 		n--;
 	}
@@ -39,7 +39,7 @@ int main(void)
 	int max;
 	printf("Digite um numero para exibir os primos menores que ele: \n\n");
 	scanf("%d", &max);
-    todos_os_primos(max);
+   	todos_os_primos(max);
 	printf("\n================================ \n :FIM DO PROGRAMA:");
 	return 0;
 }
