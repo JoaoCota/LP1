@@ -11,20 +11,29 @@ int eh_primo(int n)
 	}
 	if (count == 2)
 	{
-		printf("%d eh primo!", n);
+		return 1;
 	}
 	else
 	{
-		printf("%d nao eh primo!", n);
+		return 0;
 	}
-	
+
 }
 int main(void)
-{	
+{
 	int num;
 	printf("Digite um numero para saber se ele eh primo ou nao: \n\n");
 	scanf("%d", &num);
 	int x = eh_primo(num);
+	if (x == 1)
+	{
+        printf("O %d eh primo", num);
+	}
+	else
+	{
+        printf("O %d nao eh primo", num);
+	}
 	printf("\n================================ \n :FIM DO PROGRAMA:");
 	return 0;
 }
+
