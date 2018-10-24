@@ -1,37 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-void compra(int* p, int valor){
-    printf("Saldo conta utilizada: R$ %d.00", *p);
-}
-
-int main()
+void compra(int* conta, int valor)
 {
-    int minha_conta1, minha_conta2, i;
-    int* p;
-    int* p1;
+    *conta = *conta - valor;
+}
+int main(void)
+{
+    int conta1, conta2, valor, i;
     int compras[] = {100, 50, 80, 30, 20};
-    int valor;
+    int* conta;
     printf("Digite o saldo da conta 1: ");
-    scanf("%d", &minha_conta1);
+    scanf("%d", &conta1);
     printf("Digite o saldo da conta 2: ");
-    scanf("%d", &minha_conta2);
-    for (i=0; i<=4; i++){
+    scanf("%d", &conta2);
+    for (i = 0; i < 5; i++)
+    {
+        if (conta1 > conta2)
+        {
+            conta = &conta1;
+        }
+        else
+        {
+            conta = &conta2;
+        }
         valor = compras[i];
-        if (minha_conta1>minha_conta2){
-            minha_conta1 -= valor;
-            p = &minha_conta1;
-            p1 = &minha_conta2;
-        }
-        else{
-            minha_conta2 -= valor;
-            p = &minha_conta2;
-            p1 = &minha_conta1;
-        }
-        printf("\nSaldo pos compra\n------------------------------------------\n");
-        compra(p, valor);
-        printf("\nSaldo conta nao utilizada: R$ %d.00\n", *p1);
-        printf("------------------------------------------\n");
+        compra(conta, valor);
+        printf("\nSaldo das contas apos compra %d (No valor de R$%d):\n\nCONTA 1: %d\nCONTA 2: %d\n", i+1, compras[i], conta1, conta2);
     }
     return 0;
 }
